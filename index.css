@@ -1,0 +1,216 @@
+:root{ 
+    --color:#96d71cd6;
+    --box: 0px 0px 25px 15px var(--color);
+    --buttoncolor: #7aaa09c5;
+}
+
+body{ 
+    background-color: #61359ad1;
+    
+}
+.contrner{
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "head head head head head head head "
+    "side side anv anv anv anv anv"
+    "side side cont cont cont cont cont"
+    "side side cont cont cont cont cont"
+    "side side cont cont cont cont cont"
+    "side side cont cont cont cont cont"
+    "foter foter foter foter foter foter foter"
+    ;
+    gap: 13px;
+
+}
+.box{
+    background-color: #d4801aa6;
+}
+/*//////////////////////*/
+/* ster of head */
+.head{
+    
+    grid-area: head;
+    display: grid;
+    grid-template-areas: 
+    " loge social social serch"
+    ;
+}
+.social{
+    grid-area: social;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1em;
+}
+.fa-solid:hover{
+    grid-area: social;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2em;
+    background-color: rgb(65, 158, 44);
+    border-radius: 20%;
+    text-decoration: none; 
+}
+.loge img{
+    grid-area: loge;
+    width: 80px;
+    height: 50px;
+}
+.serch{
+    grid-area: serch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* end of head */
+/*//////////////////////*/
+/* ster of nav */
+.anv{
+    grid-area: anv;
+    display: grid;
+    grid-template-areas: 
+    "h1 h1 h1 h1"
+    " sensor auto Arduino Solar"
+    ;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav_img{
+    width: 100px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 150px;
+    height: 100px;
+}
+.sensor img{
+    grid-area: sensor;
+    border: 3px solid #030303;
+    border-radius: 20%;
+    box-shadow: var(--box);
+}
+.auto img{
+    grid-area: auto;
+    border: 3px solid #030303;
+    border-radius: 20%;
+    box-shadow:var(--box);
+}
+.Arduino img{
+    grid-area: Arduino;
+    border: 3px solid #030303;
+    border-radius: 20%;
+    box-shadow: var(--box);
+    position: relative;
+}
+.Solar img{
+    grid-area: Solar;
+    border: 3px solid #25476a;
+    border-radius: 20%;
+    box-shadow:var(--box);
+}
+.ton{
+    background-color: var(--buttoncolor);
+    border: 3px solid black;
+    border-radius: 20px;
+}
+.ton:hover{
+    box-shadow: 0px 0px 20px #1045b6;
+    background-color: #0dce4d;
+
+}
+
+                                /* end of nav */
+                                /*//////////////////////*/
+                                /* ster of side */
+.side{
+    grid-area: side;
+}
+.actev  a {
+padding: 0px;
+text-decoration: none;
+font-size: 1.5em;
+font-family: 'Times New Roman', Times, serif;
+color: #030303;
+
+}
+.menu {
+    list-style: none; 
+    position: relative; 
+}
+.min{
+    list-style: none; 
+    display: none; 
+    float: bottom; 
+}
+.menu :hover .min{
+    list-style: none; 
+    display: inline-block; 
+    box-shadow: 0px 0px 15px 15px #25476a;
+}
+
+                                /* end of side */
+                                /*//////////////////////*/
+                                /* ster of content */
+
+.content{
+    display: grid;
+    grid-area: cont;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-template-areas: 
+    "content1 content1 content1"
+    "content2 content2 content2"
+    "content3 content3 content3"
+    "content4 content4 content4"
+    ;
+}
+.content1{
+    grid-area: content1;
+}
+.content2{
+    grid-area: content2;
+
+}
+.content3{
+    grid-area: content3;
+
+}
+.content4{
+    grid-area: content4;
+}
+                                /* end of content */
+                                /*//////////////////////*/
+                                /* ster of foter */
+.foter{
+    grid-area: foter;
+}
+pre{
+    text-align: center;
+    font-size: 2em;
+}
+.ic{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+}
+@media screen and (max-width:500px) {
+    .anv{
+        grid-area: anv;
+        display: grid;
+        grid-template-areas: 
+        " sensor auto"
+        " Arduino Solar"
+        ;
+        gap: 5px;
+ }
+
+ }
